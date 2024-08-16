@@ -35,7 +35,24 @@ Para garantir que o seu PR vai passar nos checks do repositório, faça o lint d
 ```bash
 docker run -it  --rm -v$(pwd):/app -w /app  --entrypoint "" node:latest npx prettier --write .
 ``` 
-#### 6. Abra o PR para a branch `main`
+
+#### 6. Ancoras das páginas
+
+Para garantir que a validação dos links na página funcione corretamente, precisamos manter as âncoras (_anchors_) sem tradução. Temos uma action do Github que verifica os links da página, caso esteja quebrado gera avisos de `Warnings` no build.
+
+Exemplo:
+
+```md
+Título: ## O que é Observabilidade? {#what-is-observability}
+
+Título: ## Trechos {#span}
+
+Título: ## Rastros {#traces}
+```
+
+> Matenha as âncoras no idioma original, garantimos que o processo de validação dos links ocorra sem erros.
+
+#### 7. Abra o PR para a branch `main`
 Sugerimos que use um título começando com [pt], assim mantemos consistência, por exemplo:
 ```bash
 [pt-br] Localize index page to Portuguese (Brazil)
