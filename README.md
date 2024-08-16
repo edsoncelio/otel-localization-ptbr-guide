@@ -1,5 +1,3 @@
-# Guia de Contribuição para Localização da Documentação do OpenTelemetry
-
 ## Informações Gerais
 * Toda a comunicação acontece no canal (aberto) `#otel-localization-ptbr` no slack da CNCF.
 * As documentações (docs) são escritas em Markdown,
