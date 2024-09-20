@@ -49,6 +49,7 @@ developer_note:
 show_banner: true
 default_lang_commit: 08799298
 ```
+
 Para uma página nova, você precisa executar o seguinte comando para buscar a hash do commit:
 ```bash
 npm run fix:i18n:new
@@ -56,15 +57,7 @@ npm run fix:i18n:new
 Mais detalhes você pode consultar [aqui](https://opentelemetry.io/docs/contributing/localization/#track-changes).
 
 * Se atente a termos que já possuem um glossário, assim mantemos consistência entre as docs, pode checar [aqui](https://opentelemetry.io/docs/contributing/style-guide/#opentelemetryio-word-list) a lista
-
-5. Sempre antes de fazer um novo push, execute o *lint*, assim não vai quebrar nas checagens automáticas quando abrir o seu *Pull Request*:
-```bash
-docker run -it  --rm -v$(pwd):/app -w /app  --entrypoint "" node:latest npx prettier --write .
-``` 
-
-#### 6. Ancoras das páginas
-
-Para garantir que a validação dos links na página funcione corretamente, precisamos manter as âncoras (_anchors_) sem tradução.   
+* Para garantir que a validação dos links na página funcione corretamente, precisamos manter as âncoras (_anchors_) sem tradução.   
 Temos uma action do Github que verifica os links da página, caso esteja quebrado gera avisos de `Warnings` no build, exemplo:
 
 ```md
@@ -77,14 +70,19 @@ Título: ## Rastros {#traces}
 
 > Mantenha as âncoras no idioma original, assim garantimos que o processo de validação dos links ocorra sem erros.
 
-7. Quando finalizar, ou apenas quiser solicitar uma revisão, abre o *Pull Request* para a branch main.   
+5. Sempre antes de fazer um novo push, execute o *lint*, assim não vai quebrar nas checagens automáticas quando abrir o seu *Pull Request*:
+```bash
+docker run -it  --rm -v$(pwd):/app -w /app  --entrypoint "" node:latest npx prettier --write .
+``` 
+
+6. Quando finalizar, ou apenas quiser solicitar uma revisão, abre o *Pull Request* para a branch main.   
 Para essa etapa, sugerimos que use o prefixo `[pt]`no título, assim mantemos consistência, por exemplo:
 ```bash
 [pt-br] Localize index page to Portuguese (Brazil)
 ```
 
-8. Envie o PR no canal do slack `#otel-localization-ptbr`.
-9. Aguarde as interações para revisão, é esperado que tenha bastante, não se assuste :) 
+7. Envie o PR no canal do slack `#otel-localization-ptbr`.
+8. Aguarde as interações para revisão, é esperado que tenha bastante, não se assuste :) 
 
 
 ## Perguntas Frequentes
