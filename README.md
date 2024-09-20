@@ -15,29 +15,9 @@ A princípio, estamos priorizando algumas páginas para tradução, sendo que:
 * As páginas que estão [nessa issue](https://github.com/open-telemetry/opentelemetry.io/issues/4922) e ainda não tem uma pessoa atribuida são as prioritárias
 * Após todas as páginas da issue acima estarem finalizadas, a prioridade são as páginas de linguagens (`https://opentelemetry.io/pt/docs/languages/`), focando em Go, Javascript e Java.
 
-## Passo a Passo
-Após estar familiarizado com o processo de contribuição, siga o passo a passo abaixo para fazer sua primeira contribuição.
 
-1. Faça o fork do repositório da documentação: `https://github.com/open-telemetry/opentelemetry.io`
-
-2. Faça o clone do seu fork para sua máquina local, exemplo:
-```bash
-git clone git@github.com:edsoncelio/opentelemetry.io.git
-```
-
-3. Crie uma branch a partir da branch `main` para fazer sua tradução, exemplo:
-```bash
-git checkout -b adiciona_traducao_traces
-```
-   
-4. Com a branch criada, faça toda a sua tradução, sempre lembrando de fazer o push para o seu fork remoto, exemplo:
-```bash
-git add .
-git commit -m "docs: adiciona traducao de traces"
-git push origin adiciona_traducao_traces
-```
-
-Alguns pontos importantes:
+## Detalhes importantes
+Alguns detalhes importantes que você deve conferir antes de abrir seu *Pull Request*.   
 *  cada tradução é baseado em um commit das docs original, então obrigatóriamente deve ter um campo chamado `default_lang_commit` contendo a hash do commit da doc original, por exemplo:
 ```md
 title: OpenTelemetry
@@ -66,6 +46,28 @@ Título: ## O que é Observabilidade? {#what-is-observability}
 Título: ## Trechos {#span}
 
 Título: ## Rastros {#traces}
+```
+
+## Passo a Passo
+Após estar familiarizado com o processo de contribuição, siga o passo a passo abaixo para fazer sua primeira contribuição.
+
+1. Faça o fork do repositório da documentação: `https://github.com/open-telemetry/opentelemetry.io`
+
+2. Faça o clone do seu fork para sua máquina local, exemplo:
+```bash
+git clone git@github.com:edsoncelio/opentelemetry.io.git
+```
+
+3. Crie uma branch a partir da branch `main` para fazer sua tradução, exemplo:
+```bash
+git checkout -b adiciona_traducao_traces
+```
+   
+4. Com a branch criada, faça toda a sua tradução, sempre lembrando de fazer o push para o seu fork remoto, exemplo:
+```bash
+git add .
+git commit -m "docs: adiciona traducao de traces"
+git push origin adiciona_traducao_traces
 ```
 
 5. Sempre antes de abrir um *Pull Request*, execute o *lint*, assim não vai quebrar nas checagens automáticas:
