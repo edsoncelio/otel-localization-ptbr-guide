@@ -58,7 +58,7 @@ Mais detalhes você pode consultar [aqui](https://opentelemetry.io/docs/contribu
 
 * Se atente a termos que já possuem um glossário, assim mantemos consistência entre as docs, pode checar [aqui](https://opentelemetry.io/docs/contributing/style-guide/#opentelemetryio-word-list) a lista
 * Para garantir que a validação dos links na página funcione corretamente, precisamos manter as âncoras (_anchors_) sem tradução.   
-Temos uma action do Github que verifica os links da página, caso esteja quebrado gera avisos de `Warnings` no build, exemplo:
+Temos uma action do Github que verifica os links da página, caso esteja quebrado gera avisos de `Warnings` no build, exemplo de âncora:
 
 ```md
 Título: ## O que é Observabilidade? {#what-is-observability}
@@ -68,9 +68,7 @@ Título: ## Trechos {#span}
 Título: ## Rastros {#traces}
 ```
 
-> Mantenha as âncoras no idioma original, assim garantimos que o processo de validação dos links ocorra sem erros.
-
-5. Sempre antes de fazer um novo push, execute o *lint*, assim não vai quebrar nas checagens automáticas quando abrir o seu *Pull Request*:
+5. Sempre antes de abrir um *Pull Request*, execute o *lint*, assim não vai quebrar nas checagens automáticas:
 ```bash
 docker run -it  --rm -v$(pwd):/app -w /app  --entrypoint "" node:latest npx prettier --write .
 ``` 
