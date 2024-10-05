@@ -2,7 +2,7 @@ Olá, aqui você vai encontrar todas (ou quase todas) as informações para come
 a contribuir com a localização da documentação do OpenTelemetry para Português!
 
 ## Sobre a documentação do OpenTelemetry
-* Toda a documentação é hospedada em https://opentelemetry.io/pt/docs/.
+* Toda a documentação é hospedada em [https://opentelemetry.io/pt/docs/](https://opentelemetry.io/pt/docs/).
 * As documentações são escritas em [Markdown](https://www.markdownguide.org/basic-syntax/).
 
 ## Sobre o time de localização (Português)
@@ -13,8 +13,7 @@ a contribuir com a localização da documentação do OpenTelemetry para Portugu
 ## Páginas prioritárias para tradução/localização
 A princípio, estamos priorizando algumas páginas para tradução, sendo que:
 * As páginas que estão [nessa issue](https://github.com/open-telemetry/opentelemetry.io/issues/4922) e ainda não tem uma pessoa atribuida são as prioritárias
-* Após todas as páginas da issue acima estarem finalizadas, a prioridade são as páginas de linguagens (`https://opentelemetry.io/pt/docs/languages/`), focando em Go, Javascript e Java.
-
+* Após todas as páginas da issue acima estarem finalizadas, a prioridade são as páginas de linguagens (`https://opentelemetry.io/pt/docs/languages/`), focando em Go, Javascript, Java e .NET.
 
 ## Detalhes importantes
 Alguns detalhes importantes que você deve conferir antes de abrir seu *Pull Request*.   
@@ -51,38 +50,42 @@ Título: ## Rastros {#traces}
 ## Passo a Passo
 Após estar familiarizado com o processo de contribuição, siga o passo a passo abaixo para fazer sua primeira contribuição.
 
-1. Faça o fork do repositório da documentação: `https://github.com/open-telemetry/opentelemetry.io`
+1. Pesquise se já existe uma issue aberta para a documentação que quer localizar (pode usar [esse](https://github.com/open-telemetry/opentelemetry.io/issues?q=is%3Aopen+is%3Aissue+label%3Alang%3Apt) filtro de busca)
+   
+2. Caso não exista issue aberta para a página que quer localizar, pode criar uma, seguindo o padrão de título: `[pt] localization <caminho do arquivo que você vai trabalhar>`
+  
+3. Faça o fork do repositório da documentação: `https://github.com/open-telemetry/opentelemetry.io`
 
-2. Faça o clone do seu fork para sua máquina local, exemplo:
+4. Faça o clone do seu fork para sua máquina local, exemplo:
 ```bash
 git clone git@github.com:edsoncelio/opentelemetry.io.git
 ```
 
-3. Crie uma branch a partir da branch `main` para fazer sua tradução, exemplo:
+5. Crie uma branch a partir da branch `main` para fazer sua tradução, exemplo:
 ```bash
 git checkout -b adiciona_traducao_traces
 ```
    
-4. Com a branch criada, faça toda a sua tradução, sempre lembrando de fazer o push para o seu fork remoto, exemplo:
+6. Com a branch criada, faça toda a sua tradução, sempre lembrando de fazer o push para o seu fork remoto, exemplo:
 ```bash
 git add .
 git commit -m "docs: adiciona traducao de traces"
 git push origin adiciona_traducao_traces
 ```
 
-5. Sempre antes de abrir um *Pull Request*, execute o *lint*, assim não vai quebrar nas checagens automáticas:
+7. Sempre antes de abrir um *Pull Request*, execute o *lint*, assim não vai quebrar nas checagens automáticas:
 ```bash
 docker run -it  --rm -v$(pwd):/app -w /app  --entrypoint "" node:latest npx prettier --write .
 ``` 
 
-6. Quando finalizar, ou apenas quiser solicitar uma revisão, abre o *Pull Request* para a branch main.   
+8. Quando finalizar, ou apenas quiser solicitar uma revisão, abre o *Pull Request* para a branch main.   
 Para essa etapa, sugerimos que use o prefixo `[pt]`no título, assim mantemos consistência, por exemplo:
 ```bash
 [pt-br] Localize index page to Portuguese (Brazil)
 ```
 
-7. Envie o PR no canal do slack `#otel-localization-ptbr`.
-8. Aguarde as interações para revisão, é esperado que tenha bastante, não se assuste :) 
+9. Envie o PR no canal do slack `#otel-localization-ptbr`.
+10. Aguarde as interações para revisão, é esperado que tenha bastante, não se assuste :) 
 
 
 ## Perguntas Frequentes
