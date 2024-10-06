@@ -2,7 +2,8 @@ Olá, aqui você vai encontrar todas (ou quase todas) as informações para come
 a contribuir com a localização da documentação do OpenTelemetry para Português!
 
 ## Sobre a documentação do OpenTelemetry
-* Toda a documentação é hospedada em [https://opentelemetry.io/pt/docs/](https://opentelemetry.io/pt/docs/).
+* Link para a documentação: [https://opentelemetry.io/pt/docs/](https://opentelemetry.io/pt/docs/).
+* Link para o repositório da documentação: [https://github.com/open-telemetry/opentelemetry.io](https://github.com/open-telemetry/opentelemetry.io)
 * As documentações são escritas em [Markdown](https://www.markdownguide.org/basic-syntax/).
 
 ## Sobre o time de localização (Português)
@@ -50,7 +51,7 @@ Título: ## Rastros {#traces}
 ## Passo a Passo
 Após estar familiarizado com o processo de contribuição, siga o passo a passo abaixo para fazer sua primeira contribuição.
 
-1. Pesquise se já existe uma issue aberta para a documentação que quer localizar (pode usar [esse](https://github.com/open-telemetry/opentelemetry.io/issues?q=is%3Aopen+is%3Aissue+label%3Alang%3Apt) filtro de busca)
+1. Pesquise se já existe uma issue aberta para a documentação que quer localizar (pode usar [esse](https://github.com/open-telemetry/opentelemetry.io/issues?q=is%3Aopen+is%3Aissue+label%3Alang%3Apt) filtro de busca), se já existir uma issue e alguém trabalhando, procure outra página.
    
 2. Caso não exista issue aberta para a página que quer localizar, pode criar uma, seguindo o padrão de título: `[pt] localization <caminho do arquivo que você vai trabalhar>`
   
@@ -81,12 +82,11 @@ docker run -it  --rm -v$(pwd):/app -w /app  --entrypoint "" node:latest npx pret
 8. Quando finalizar, ou apenas quiser solicitar uma revisão, abre o *Pull Request* para a branch main.   
 Para essa etapa, sugerimos que use o prefixo `[pt]`no título, assim mantemos consistência, por exemplo:
 ```bash
-[pt-br] Localize index page to Portuguese (Brazil)
+[pt] Localize content/pt/docs/concepts/components.md
 ```
 
 9. Envie o PR no canal do slack `#otel-localization-ptbr`.
 10. Aguarde as interações para revisão, é esperado que tenha bastante, não se assuste :) 
-
 
 ## Perguntas Frequentes
 TBD
