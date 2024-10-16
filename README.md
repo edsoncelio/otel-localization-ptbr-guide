@@ -32,11 +32,12 @@ default_lang_commit: 08799298
 
 Para uma página nova, você precisa executar o seguinte comando para buscar a hash do commit:
 ```bash
-npm run fix:i18n:new
+docker run -it  --rm -v$(pwd):/app -w /app  --entrypoint "" node:latest npm run fix:i18n:new
 ```
 Mais detalhes você pode consultar [aqui](https://opentelemetry.io/docs/contributing/localization/#track-changes).
 
 * Se atente a termos que já possuem um glossário, assim mantemos consistência entre as docs, pode checar [aqui](https://opentelemetry.io/docs/contributing/style-guide/#opentelemetryio-word-list) a lista
+  * Caso tenha dúvidas sobre a tradução de um termo, verifique o glossário que time vem desenvolvendo [aqui](https://docs.google.com/document/d/1kyu6HgdsM3-iDyf3OuRmfw4SwNJy9BVui6nn5JsKb5I/edit?tab=t.0#heading=h.o389kqcsmupl) 
 * Para garantir que a validação dos links na página funcione corretamente, precisamos manter as âncoras (_anchors_) sem tradução.   
 Temos uma action do Github que verifica os links da página, caso esteja quebrado gera avisos de `Warnings` no build, exemplo de âncora:
 
