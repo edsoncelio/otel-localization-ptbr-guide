@@ -49,6 +49,8 @@ Título: ## Trechos {#span}
 Título: ## Rastros {#traces}
 ```
 
+* Se o cabeçalho conter um campo `redirects:`, remova.
+
 ## Passo a Passo
 Após estar familiarizado com o processo de contribuição, siga o passo a passo abaixo para fazer sua primeira contribuição.
 
