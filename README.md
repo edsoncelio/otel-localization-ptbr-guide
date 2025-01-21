@@ -91,5 +91,57 @@ Para essa etapa, sugerimos que use o prefixo `[pt]`no título, assim mantemos co
 9. Envie o PR no canal do slack `#otel-localization-ptbr`.
 10. Aguarde as interações para revisão, é esperado que tenha bastante, não se assuste :) 
 
+## ID ausente no Commit
+
+O problema é que o autor dos commits não está vinculado à conta do usuário no GitHub e isso é necessário para que o EasyCLA identifique o usuário e conceda autorização. 
+
+
+![image](https://github.com/user-attachments/assets/525f72b0-09ef-42dc-86f2-9ede4e7e3fc2)
+
+Geralmente ajustar as configurações globais do GitHub resolve o problema.
+
+```sh
+git commit --amend --author="FirstName LastName <emailaddress>" --no-edit
+
+git push --force
+```
+
+### Caso Contrário faça rebase do commit:
+
+Primeiro identifique qual commit você precisa ajustar.
+
+![image](https://github.com/user-attachments/assets/ac173020-0bd0-4e22-a980-b7489b3ea0a1)
+
+
+```sh
+git rebase -i <SHA-Resumido-Commit>^
+```
+
+Isso abrirá um editor, mude o comando `pick` para `edit` no commit que deseja corrigir:
+
+```sh
+pick <SHA-Resumido-Commit> feat: mensagem de exemplo do commit
+```
+
+Salve e feche o editor.
+
+Agora, atualize o autor do commit com o comando abaixo, substituindo pelo nome e e-mail corretos:
+
+```sh
+git commit --amend --author="FirstName LastName <emailaddress>" --no-edit
+```
+
+Depois de corrigir o commit, continue o processo de rebase:
+
+```sh
+git rebase --continue
+```
+
+Como o histórico foi alterado, será necessário forçar o push para o repositório remoto:
+
+```sh
+git push --force
+```
+
 ## Perguntas Frequentes
 TBD
